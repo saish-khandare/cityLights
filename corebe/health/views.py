@@ -1,3 +1,5 @@
+from django.shortcuts import render
+
 import time
 
 from django.http import JsonResponse

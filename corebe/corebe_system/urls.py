@@ -17,9 +17,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from corebe_system.health.views import HealthCheckView
+from health.views import HealthCheckView
+from flyer.views import Flyer
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("health/", HealthCheckView.as_view(), name="healthCheckView")
+    # path("health/", HealthCheckView.as_view(), name="healthCheckView")
+    path("health/", HealthCheckView.as_view(), name="healthCheckView"),
+    path("flyer/", Flyer.as_view(), name="flyerView")
 ]
